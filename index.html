@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Adam Nur Setyawan</title>
+    <meta name="description" content="Anime-styled Interactive Portfolio - Adam Nur Setyawan. Shift Worker, Programmer, Gamer.">
+    <meta property="og:title" content="Profile - Adam Nur Setyawan">
+    <meta property="og:description" content="Anime-styled Interactive Portfolio - Adam Nur Setyawan. Shift Worker, Programmer, Gamer.">
+    
+    <!-- OPTIMISASI KONEKSI ASSET CEPAT & TANPA LATENSI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js" defer></script>
+    
+    <style>
+        /* === TEMA PORTOFOLIO ANIME (PALET WARNA: #2660AA, #1B70C3, #1095D6, #06B3DD, #06CAE0) === */
+        :root {
+            --c1: #2660aa;
+            --c2: #1b70c3;
+            --c3: #1095d6;
+            --c4: #06b3dd;
+            --c5: #06cae0;
+
+            /* MODE TERANG: ESTETIKA ANIME LANGIT KRISTAL */
+            --bg-base: #f0f6fc;
+            --bg-mesh-1: rgba(38, 96, 170, 0.12);
+            --bg-mesh-2: rgba(16, 149, 214, 0.14);
+            --bg-mesh-3: rgba(6, 202, 224, 0.16);
+            --container-bg: rgba(255, 255, 255, 0.96);
+            --container-border: rgba(16, 149, 214, 0.35);
+            --container-shadow: 0 20px 50px -10px rgba(38, 96, 170, 0.18), 0 0 0 1px rgba(6, 202, 224, 0.25);
+            --text-main: #0c203b;
+            --text-sub: #466282;
+            --heading-color: #0c264a;
+            --card-bg: rgba(244, 250, 255, 0.9);
+            --card-border: rgba(16, 149, 214, 0.28);
+            --card-hover: #ffffff;
+            --card-hover-border: var(--c4);
+            --bio-bg: linear-gradient(180deg, rgba(235, 246, 255, 0.92) 0%, rgba(240, 250, 255, 0.78) 100%);
+            --bio-border: rgba(16, 149, 214, 0.3);
+            --bio-text: #1a3353;
+            --hud-tag-bg: rgba(6, 179, 221, 0.12);
+            --hud-tag-border: rgba(6, 179, 221, 0.38);
+            --hud-tag-text: #1b70c3;
+            --skill-info: var(--c2);
+            --skill-bar-bg: #dbeafe;
+            --input-bg: rgba(255, 255, 255, 0.95);
+            --drawer-bg: rgba(12, 38, 74, 0.98);
+            --drawer-text: #e0f2fe;
+            --btn-float-bg: rgba(255, 255, 255, 0.94);
+            --btn-float-icon: var(--c2);
+            --scrollbar-bg: #e6f3fd;
+            --scrollbar-thumb: var(--c3);
+            --scrollbar-thumb-hover: var(--c1);
+            --border-glow: rgba(6, 202, 224, 0.5);
+            --partner-bg: rgba(244, 250, 255, 0.9);
+            --partner-border: rgba(16, 149, 214, 0.28);
+            --partner-hover: #ffffff;
+            --partner-title: #0c264a;
+            --partner-sub: var(--c2);
+        }
+
+        body.dark-mode {
+            /* MODE GELAP: ESTETIKA ANIME SIBER MALAM */
+            --bg-base: #060d19;
+            --bg-mesh-1: rgba(38, 96, 170, 0.35);
+            --bg-mesh-2: rgba(16, 149, 214, 0.28);
+            --bg-mesh-3: rgba(6, 202, 224, 0.26);
+            --container-bg: rgba(10, 19, 36, 0.95);
+            --container-border: rgba(6, 202, 224, 0.32);
+            --container-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.85), 0 0 25px rgba(6, 202, 224, 0.15);
+            --text-main: #f0f9ff;
+            --text-sub: #90b0d4;
+            --heading-color: #e0f2fe;
+            --card-bg: rgba(14, 27, 50, 0.8);
+            --card-border: rgba(6, 202, 224, 0.24);
+            --card-hover: rgba(18, 36, 68, 0.96);
+            --card-hover-border: var(--c5);
+            --bio-bg: linear-gradient(180deg, rgba(14, 28, 54, 0.85) 0%, rgba(10, 22, 42, 0.75) 100%);
+            --bio-border: rgba(6, 202, 224, 0.28);
+            --bio-text: #cbdff5;
+            --hud-tag-bg: rgba(6, 202, 224, 0.14);
+            --hud-tag-border: rgba(6, 202, 224, 0.42);
+            --hud-tag-text: var(--c5);
+            --skill-info: var(--c4);
+            --skill-bar-bg: rgba(16, 32, 60, 0.85);
+            --input-bg: rgba(12, 24, 46, 0.88);
+            --drawer-bg: rgba(6, 14, 28, 0.98);
+            --drawer-text: #f0f9ff;
+            --btn-float-bg: rgba(10, 22, 44, 0.94);
+            --btn-float-icon: var(--c5);
+            --scrollbar-bg: #060d19;
+            --scrollbar-thumb: var(--c2);
+            --scrollbar-thumb-hover: var(--c5);
+            --border-glow: rgba(6, 202, 224, 0.6);
+            --partner-bg: rgba(14, 27, 50, 0.8);
+            --partner-border: rgba(6, 202, 224, 0.24);
+            --partner-hover: rgba(18, 36, 68, 0.96);
+            --partner-title: #e0f2fe;
+            --partner-sub: var(--c4);
+        }
+
+        /* === BILAH GULIR KUSTOM (CUSTOM SCROLLBAR) === */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--scrollbar-bg); transition: background 0.3s ease; }
+        ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 10px; transition: background 0.3s ease; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
+
+        /* === KURSOR KUSTOM INTERAKTIF (PERCEPATAN HARDWARE / ZERO-LAG) === */
+        @media (pointer: fine) {
+            body { cursor: none; }
+            a, button, input, textarea, .profile-img-wrapper, .faq-question { cursor: none; }
+            .cursor-dot {
+                width: 6px;
+                height: 6px;
+                background: var(--c5);
+                border-radius: 50%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                pointer-events: none;
+                z-index: 10001;
+                box-shadow: 0 0 8px var(--c5);
+                will-change: transform;
+                transform: translate3d(-100px, -100px, 0);
+            }
+            .cursor-outline {
+                width: 30px;
+                height: 30px;
+                border: 1.5px solid var(--c4);
+                border-radius: 50%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                pointer-events: none;
+                z-index: 10000;
+                box-shadow: 0 0 10px rgba(6, 202, 224, 0.2);
+                will-change: transform, width, height, border-color, background;
+                transition: width 0.2s cubic-bezier(0.16, 1, 0.3, 1), height 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, background 0.2s ease;
+                transform: translate3d(-100px, -100px, 0);
+            }
+            .cursor-hover .cursor-outline {
+                width: 46px;
+                height: 46px;
+                background: rgba(6, 202, 224, 0.12);
+                border-color: var(--c5);
+                box-shadow: 0 0 16px rgba(6, 202, 224, 0.4);
+            }
+        }
+
+        html { scroll-behavior: smooth; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-base);
+            background-image: 
+                radial-gradient(circle at 15% 15%, var(--bg-mesh-1) 0%, transparent 45%),
+                radial-gradient(circle at 85% 25%, var(--bg-mesh-2) 0%, transparent 45%),
+                radial-gradient(circle at 50% 85%, var(--bg-mesh-3) 0%, transparent 50%),
+                linear-gradient(rgba(6, 179, 221, 0.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(6, 179, 221, 0.035) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-main);
+            padding: 40px 16px;
+            transition: background 0.5s ease, color 0.5s ease;
+            contain: paint;
+        }
+
+        @keyframes fadeUpIn {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .profile-container {
+            background: var(--container-bg);
+            width: 100%;
+            max-width: 448px;
+            border-radius: 24px;
+            border: 1px solid var(--container-border);
+            box-shadow: var(--container-shadow);
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 30px;
+            animation: fadeUpIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            transition: background 0.5s ease, box-shadow 0.5s ease, border 0.5s ease;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        /* === AKSEN SUDUT HUD ANIME SIMETRIS === */
+        .profile-container::before,
+        .profile-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            pointer-events: none;
+            z-index: 5;
+        }
+        .profile-container::before {
+            left: 0;
+            border-top: 2px solid var(--c5);
+            border-left: 2px solid var(--c5);
+            border-top-left-radius: 24px;
+        }
+        .profile-container::after {
+            right: 0;
+            border-top: 2px solid var(--c5);
+            border-right: 2px solid var(--c5);
+            border-top-right-radius: 24px;
+        }
+
+        .banner {
+            width: 100%;
+            height: 185px;
+            background-image: url('banner.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            will-change: auto;
+        }
+        .banner::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 65px;
+            background: linear-gradient(to top, var(--container-bg) 0%, transparent 100%);
+        }
+
+        .content-wrapper {
+            padding: 0 24px;
+            text-align: center;
+            margin-top: -65px;
+            position: relative;
+        }
+
+        /* === BINGKAI FOTO PROFIL BERSINAR === */
+        .profile-img-wrapper {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            padding: 5px;
+            background: linear-gradient(135deg, var(--c1) 0%, var(--c3) 50%, var(--c5) 100%);
+            margin: 0 auto 12px auto;
+            box-shadow: 0 0 0 3px rgba(6, 202, 224, 0.22), 0 10px 30px -4px rgba(27, 112, 195, 0.4);
+            background-color: var(--container-bg);
+            transition: transform 0.25s ease, box-shadow 0.3s ease;
+        }
+        .profile-img-wrapper:hover {
+            transform: scale(1.04);
+            box-shadow: 0 0 0 5px rgba(6, 202, 224, 0.4), 0 14px 35px -2px rgba(6, 202, 224, 0.55);
+        }
+        .profile-img-wrapper:active { transform: scale(0.96); }
+        .profile-img-wrapper img {
+            width: 126px;
+            height: 126px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--container-bg);
+            display: block;
+            transition: border 0.5s ease;
+        }
+
+        /* === SUBTITLE JEPANG KARAKTER ANIME === */
+        .anime-character-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+        .jp-sub {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--c4);
+            text-transform: uppercase;
+        }
+
+        .dynamic-greeting {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--c3);
+            margin: 6px 0 3px 0;
+            letter-spacing: 0.5px;
+        }
+        body.dark-mode .dynamic-greeting { color: var(--c5); }
+
+        /* === JAM DIGITAL SIMETRIS === */
+        .digital-clock {
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+            font-weight: bold;
+            background: rgba(6, 179, 221, 0.08);
+            color: var(--skill-info);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 16px;
+            border-radius: 20px;
+            margin: 4px auto 8px auto;
+            border: 1px solid var(--bio-border);
+            box-shadow: 0 0 10px rgba(6, 202, 224, 0.1);
+        }
+        body.dark-mode .digital-clock {
+            background: rgba(6, 202, 224, 0.12);
+            color: var(--c5);
+            border-color: rgba(6, 202, 224, 0.3);
+        }
+
+        h1 {
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            color: var(--heading-color);
+            margin-bottom: 2px;
+            transition: color 0.5s ease;
+        }
+        .username-tag {
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--c3);
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+        body.dark-mode .username-tag { color: var(--c4); }
+
+        .typing-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .typing-text {
+            font-size: 13px;
+            color: var(--text-sub);
+            font-style: italic;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid var(--c5);
+            animation: typing 3s steps(30, end) infinite, blink-caret .75s step-end infinite;
+            max-width: 100%;
+            transition: color 0.5s ease;
+        }
+        @keyframes typing { 0% { width: 0 } 40% { width: 230px; } 80% { width: 230px; } 100% { width: 0; } }
+        @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--c5); } }
+
+        /* === KARTU STATISTIK & PROFIL BIODATA === */
+        .bio-section {
+            background: var(--bio-bg);
+            border: 1px solid var(--bio-border);
+            border-radius: 18px;
+            padding: 16px 18px;
+            margin: 16px 0;
+            text-align: left;
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--bio-text);
+            transition: all 0.5s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+            position: relative;
+        }
+        .bio-section::before {
+            content: 'PROFILE // ステータス';
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 9.5px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: var(--c3);
+            display: block;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+        }
+        .bio-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3px 0;
+            border-bottom: 1px dashed rgba(6, 179, 221, 0.15);
+        }
+        .bio-row:last-of-type { border-bottom: none; }
+        .bio-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--heading-color);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .bio-label i {
+            color: var(--c2);
+            width: 16px;
+            text-align: center;
+        }
+        body.dark-mode .bio-label i { color: var(--c4); }
+        .bio-value {
+            font-size: 12.5px;
+            color: var(--bio-text);
+            text-align: right;
+            font-weight: 500;
+        }
+        .email-link {
+            color: var(--heading-color);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px dashed var(--c3);
+            transition: color 0.3s ease;
+        }
+        .email-link:hover { color: var(--c4); }
+        
+        /* === STATUS AKTIVITAS LANGSUNG (SIMETRIS) === */
+        .live-status-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 4px;
+            padding-top: 8px;
+            border-top: 1px dashed var(--bio-border);
+        }
+        .live-status-box {
+            background: var(--input-bg);
+            font-weight: 600;
+            font-size: 12px;
+            padding: 7px 16px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            color: var(--heading-color);
+            border: 1px solid var(--partner-border);
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        /* === JUDUL BAGIAN SIMETRIS 100% DENGAN SUBTITLE JEPANG === */
+        .section-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0 16px 0;
+            width: 100%;
+            transition: color 0.5s ease;
+            user-select: none;
+        }
+        .section-title .title-jp {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 9.5px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: var(--c4);
+            text-transform: uppercase;
+            margin-bottom: 3px;
+            opacity: 0.95;
+        }
+        .section-title .title-main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            font-size: 13.5px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--heading-color);
+        }
+        .section-title .title-main::before,
+        .section-title .title-main::after {
+            content: '';
+            flex: 1;
+            height: 1.5px;
+            background: linear-gradient(90deg, transparent, var(--c4), transparent);
+        }
+        .skill-stat-badge {
+            font-family: 'Space Mono', monospace;
+            font-size: 11.5px;
+            color: var(--c3);
+            letter-spacing: 0.5px;
+            font-weight: 700;
+        }
+        body.dark-mode .skill-stat-badge { color: var(--c4); }
+
+        .card-action-badge {
+            font-size: 10.5px;
+            font-weight: 700;
+            padding: 5px 10px;
+            border-radius: 8px;
+            background: var(--hud-tag-bg);
+            border: 1px solid var(--hud-tag-border);
+            color: var(--hud-tag-text);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        .item-card:hover .card-action-badge {
+            background: linear-gradient(135deg, var(--c2) 0%, var(--c4) 100%);
+            color: white;
+            border-color: var(--c5);
+            box-shadow: 0 0 10px rgba(6, 202, 224, 0.4);
+            transform: translateX(2px);
+        }
+
+        /* === TOMBOL AKSI UTAMA 50/50 SIMETRIS === */
+        .action-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 18px 0;
+            width: 100%;
+        }
+        .action-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            color: white;
+            padding: 12px 14px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 13px;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 100%;
+            height: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+        .action-btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+        .btn-resume {
+            background: linear-gradient(135deg, var(--c1) 0%, var(--c2) 100%);
+            border: 1px solid rgba(6, 202, 224, 0.3);
+            box-shadow: 0 4px 15px rgba(38, 96, 170, 0.35);
+        }
+        .btn-resume:hover {
+            box-shadow: 0 6px 20px rgba(38, 96, 170, 0.5), 0 0 12px rgba(6, 202, 224, 0.4);
+        }
+        .btn-support {
+            background: linear-gradient(135deg, var(--c3) 0%, var(--c4) 100%);
+            border: 1px solid rgba(6, 202, 224, 0.4);
+            box-shadow: 0 4px 15px rgba(16, 149, 214, 0.35);
+        }
+        .btn-support:hover {
+            box-shadow: 0 6px 20px rgba(6, 179, 221, 0.5), 0 0 12px rgba(6, 202, 224, 0.5);
+        }
+
+        /* === GAUGES KEAHLIAN / SKILL BAR === */
+        .skills-section { margin: 24px 0 14px 0; text-align: left; }
+        .skill-item { margin-bottom: 14px; }
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-main);
+            transition: color 0.5s ease;
+        }
+        .skill-info i { margin-right: 8px; width: 18px; text-align: center; }
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: var(--skill-bar-bg);
+            border-radius: 6px;
+            overflow: hidden;
+            transition: background 0.5s ease;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .progress {
+            height: 100%;
+            border-radius: 6px;
+            width: 0;
+            transition: width 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+            position: relative;
+        }
+        .skill-item.animate .progress { width: var(--w); }
+        .html-progress,
+        .css-progress,
+        .python-progress,
+        .js-progress,
+        .sleep-progress {
+            background: linear-gradient(90deg, var(--c1) 0%, var(--c3) 50%, var(--c5) 100%);
+            box-shadow: 0 0 10px rgba(6, 202, 224, 0.45);
+        }
+
+        /* === SISTEM TERMINAL SIBER INTERAKTIF === */
+        .terminal-box {
+            background: #070e1c;
+            color: #a5f3fc;
+            font-family: 'Space Mono', monospace;
+            border-radius: 16px;
+            padding: 14px;
+            text-align: left;
+            margin-bottom: 20px;
+            border: 1px solid rgba(6, 202, 224, 0.35);
+            box-shadow: inset 0 0 16px rgba(0,0,0,0.65), 0 8px 24px rgba(38, 96, 170, 0.25);
+            opacity: 0;
+            transform: translateY(20px);
+            font-size: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        .terminal-box.animate { animation: slideUpFade 0.6s ease forwards; }
+        .terminal-header {
+            background: #0f1c36;
+            margin: -14px -14px 10px -14px;
+            padding: 9px 14px;
+            font-size: 11px;
+            color: #94a3b8;
+            border-radius: 15px 15px 0 0;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            border-bottom: 1px solid rgba(6, 202, 224, 0.2);
+        }
+        .terminal-dots span { display: inline-block; width: 9px; height: 9px; border-radius: 50%; }
+        .dot-r { background: #ff5f56; } .dot-y { background: #ffbd2e; } .dot-g { background: #27c93f; }
+        .terminal-body { max-height: 120px; overflow-y: auto; margin-bottom: 10px; padding-right: 5px; line-height: 1.5; }
+        .terminal-body::-webkit-scrollbar { width: 5px; }
+        .terminal-body::-webkit-scrollbar-thumb { background: var(--c3); border-radius: 5px; }
+        .terminal-input-line { display: flex; align-items: center; gap: 8px; }
+        .term-prompt { color: var(--c5); font-weight: bold; }
+        .term-input {
+            background: transparent;
+            border: none;
+            color: #a5f3fc;
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+            width: 100%;
+            outline: none;
+        }
+
+        /* === KARTU ITEM PROYEK & KARYA === */
+        .item-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            text-align: left;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            width: 100%;
+        }
+        .item-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(16, 149, 214, 0.22);
+            border-color: var(--card-hover-border);
+            background: var(--card-hover);
+        }
+        .item-icon {
+            background: linear-gradient(135deg, var(--c1) 0%, var(--c2) 50%, var(--c3) 100%);
+            color: white;
+            width: 44px;
+            height: 44px;
+            border-radius: 13px;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            box-shadow: 0 4px 12px rgba(38, 96, 170, 0.3);
+            border: 1px solid rgba(6, 202, 224, 0.3);
+        }
+        .item-info { flex: 1; min-width: 0; }
+        .item-info h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--heading-color);
+            margin-bottom: 2px;
+            transition: color 0.5s ease;
+        }
+        .item-info p {
+            font-size: 12px;
+            color: var(--text-sub);
+            transition: color 0.5s ease;
+            line-height: 1.4;
+        }
+        
+        /* === IKON SPESIAL: ROBLOX & GOOGLE GEMINI === */
+        .icon-roblox {
+            background: linear-gradient(135deg, var(--c1) 0%, var(--c2) 100%);
+            color: #FFFFFF;
+            border: 1.5px solid var(--c5);
+            box-shadow: 0 0 14px rgba(6, 202, 224, 0.4);
+        }
+        .icon-gemini {
+            background: linear-gradient(135deg, #2660aa 0%, #1b70c3 25%, #1095d6 50%, #06b3dd 75%, #06cae0 100%);
+            color: #FFFFFF;
+            border: 1.5px solid var(--c5);
+            box-shadow: 0 0 14px rgba(6, 202, 224, 0.4);
+        }
+
+        /* === BAGIAN MITRA SIMETRIS === */
+        .partner-link { text-decoration: none; display: block; width: 100%; margin-bottom: 12px; }
+        .partner-section {
+            background: var(--partner-bg);
+            border-radius: 16px;
+            padding: 14px 16px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            border: 1px solid var(--partner-border);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            width: 100%;
+        }
+        .partner-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(6, 202, 224, 0.22);
+            border-color: var(--c4);
+            background: var(--partner-hover);
+        }
+        .partner-logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 13px;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(38, 96, 170, 0.18), rgba(6, 202, 224, 0.22));
+            border: 1px solid rgba(6, 202, 224, 0.4);
+        }
+        .partner-info { text-align: left; flex: 1; min-width: 0; }
+        .partner-info h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--partner-title);
+            margin-bottom: 2px;
+            line-height: 1.2;
+            transition: color 0.5s ease;
+        }
+        .partner-info .sub-title {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--partner-sub);
+            margin-bottom: 2px;
+            transition: color 0.5s ease;
+        }
+        .partner-info p {
+            font-size: 12px;
+            color: var(--text-sub);
+            line-height: 1.3;
+            transition: color 0.5s ease;
+        }
+
+        /* === TOMBOL MEDIA SOSIAL (GRADASI 5 WARNA SERAGAM 46PX) === */
+        .social-buttons { display: flex; flex-direction: column; gap: 10px; width: 100%; }
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            color: white;
+            padding: 12px 16px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 13.5px;
+            letter-spacing: 0.3px;
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.3s ease, filter 0.3s ease;
+            width: 100%;
+            height: 46px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .social-btn.animate { animation: slideUpFade 0.5s ease forwards; }
+        @keyframes slideUpFade { to { opacity: 1; transform: translateY(0); } }
+        .social-btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.08);
+        }
+        .social-btn i.fa-fw { font-size: 1.15em; width: 20px; text-align: center; }
+
+        /* GRADASI RESMI KUSTOM ADAM */
+        .btn-wa, .btn-tiktok, .btn-fb, .btn-ig, .btn-discord, .btn-yt, .btn-tele {
+            background: linear-gradient(135deg, #2660aa 0%, #1b70c3 25%, #1095d6 50%, #06b3dd 75%, #06cae0 100%);
+            box-shadow: 0 4px 14px rgba(6, 179, 221, 0.35);
+        }
+        .btn-wa:hover, .btn-tiktok:hover, .btn-fb:hover, .btn-ig:hover, .btn-discord:hover, .btn-yt:hover, .btn-tele:hover {
+            box-shadow: 0 6px 22px rgba(6, 202, 224, 0.55);
+        }
+
+        .btn-toggle-social {
+            background: var(--bio-bg);
+            color: var(--heading-color);
+            border: 1px solid var(--bio-border);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            cursor: pointer;
+            height: 44px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .btn-toggle-social:hover {
+            background: var(--bio-border);
+            color: var(--heading-color);
+            box-shadow: none;
+        }
+        
+        .hidden-socials { display: none; flex-direction: column; gap: 10px; margin: 0; width: 100%; }
+        .hidden-socials.show { display: flex; animation: fadeInTight 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        @keyframes fadeInTight { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* === AKORDION TANYA JAWAB (FAQ) === */
+        .faq-container { margin-bottom: 20px; display: flex; flex-direction: column; gap: 10px; width: 100%; }
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(16px);
+            width: 100%;
+        }
+        .faq-item.animate { animation: slideUpFade 0.5s ease forwards; }
+        .faq-question {
+            padding: 13px 16px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--heading-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+            text-align: left;
+        }
+        .faq-question:hover { background: var(--partner-hover); }
+        .faq-question i { transition: transform 0.3s ease; color: var(--c4); font-size: 12px; }
+        .faq-answer {
+            padding: 0 16px;
+            max-height: 0;
+            font-size: 12.5px;
+            color: var(--bio-text);
+            overflow: hidden;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            line-height: 1.6;
+            text-align: left;
+        }
+        .faq-item.active .faq-answer { padding: 13px 16px; max-height: 200px; border-top: 1px dashed var(--bio-border); }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+
+        /* === FORMULIR KONTAK SIMETRIS === */
+        .contact-form { display: flex; flex-direction: column; gap: 12px; text-align: left; width: 100%; }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 14px;
+            border: 1px solid var(--card-border);
+            background: var(--input-bg);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 13.5px;
+            outline: none;
+            transition: border 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--c4);
+            box-shadow: 0 0 0 3px rgba(6, 202, 224, 0.25);
+        }
+        .form-group textarea { resize: vertical; min-height: 95px; }
+        .submit-btn {
+            background: linear-gradient(135deg, var(--c1) 0%, var(--c2) 50%, var(--c3) 100%);
+            color: white;
+            border: 1px solid rgba(6, 202, 224, 0.35);
+            padding: 12px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(38, 96, 170, 0.35);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            width: 100%;
+            height: 46px;
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 149, 214, 0.5), 0 0 12px rgba(6, 202, 224, 0.4);
+            filter: brightness(1.08);
+        }
+
+        /* === PEMUTAR MUSIK SPOTIFY SIMETRIS === */
+        .spotify-player-container { margin-top: 4px; width: 100%; transition: all 0.3s ease; }
+        .spotify-player-container:hover { transform: translateY(-2px); }
+        
+        .footer-cr {
+            margin-top: 32px;
+            font-size: 11.5px;
+            color: var(--text-sub);
+            font-weight: 500;
+            transition: color 0.5s ease;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+        .footer-cr i { color: #f43f5e; }
+
+        /* === KONTROL MENGAMBANG (FLOATING CONTROLS) === */
+        .floating-controls { position: fixed; top: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 1000; }
+        .control-btn {
+            background: var(--btn-float-bg);
+            color: var(--btn-float-icon);
+            border: 1px solid var(--bio-border);
+            font-size: 17px;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        .control-btn:hover {
+            transform: scale(1.08);
+            background: var(--container-bg);
+            box-shadow: 0 6px 18px rgba(6, 202, 224, 0.35);
+            border-color: var(--c4);
+        }
+        #back-to-top { position: fixed; bottom: 20px; right: 20px; opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(20px); z-index: 1000; transition: all 0.3s ease; }
+        #back-to-top.show { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
+
+        /* === LACI NAVIGASI SAMPING (SIDE DRAWER) === */
+        .side-drawer {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 260px;
+            height: 100vh;
+            background: var(--drawer-bg);
+            z-index: 1002;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 60px 20px 20px;
+            box-shadow: -10px 0 30px rgba(0,0,0,0.6);
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid rgba(6, 202, 224, 0.25);
+        }
+        .side-drawer.open { right: 0; }
+        .close-btn { position: absolute; top: 20px; right: 20px; background: none; border: none; color: white; font-size: 22px; transition: transform 0.3s; cursor: pointer; }
+        .close-btn:hover { transform: scale(1.1) rotate(90deg); color: var(--c5); }
+        .drawer-nav { display: flex; flex-direction: column; gap: 8px; margin-top: 15px; overflow-y: auto; }
+        .nav-link {
+            text-decoration: none;
+            color: var(--drawer-text);
+            font-size: 13.5px;
+            font-weight: 600;
+            padding: 11px 14px;
+            border-radius: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        .nav-link i { margin-right: 14px; width: 18px; text-align: center; color: var(--c5); }
+        .nav-link:hover {
+            background: rgba(6, 202, 224, 0.15);
+            padding-left: 18px;
+            color: white;
+            border-bottom: 1px solid transparent;
+        }
+        .drawer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.65);
+            z-index: 1001;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s, visibility 0.4s;
+        }
+        .drawer-overlay.open { opacity: 1; visibility: visible; }
+    </style>
+</head>
+<body>
+
+    <!-- ELEMEN KURSOR SIBER -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- TOMBOL KEMBALI KE ATAS -->
+    <button id="back-to-top" class="control-btn play-sfx" title="Kembali ke Atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- TOMBOL KONTROL MENGAMBANG -->
+    <div class="floating-controls">
+        <button id="menu-btn" class="control-btn play-sfx" title="Menu Navigasi">
+            <i class="fas fa-bars"></i>
+        </button>
+        <button id="theme-btn" class="control-btn play-sfx" title="Toggle Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- LACI NAVIGASI SAMPING -->
+    <div id="side-drawer" class="side-drawer">
+        <button id="close-btn" class="close-btn play-sfx" aria-label="Tutup Menu"><i class="fas fa-times"></i></button>
+        <div class="drawer-nav">
+            <a href="#profile" class="nav-link play-sfx"><i class="fas fa-user"></i> Profil</a>
+            <a href="#keahlian" class="nav-link play-sfx"><i class="fas fa-laptop-code"></i> Keahlian</a>
+            <a href="#terminal" class="nav-link play-sfx"><i class="fas fa-terminal"></i> Terminal</a>
+            <a href="#proyek" class="nav-link play-sfx"><i class="fas fa-briefcase"></i> Proyek</a>
+            <a href="#faq" class="nav-link play-sfx"><i class="fas fa-question-circle"></i> FAQ</a>
+            <a href="#mitra" class="nav-link play-sfx"><i class="fas fa-handshake"></i> Mitra</a>
+            <a href="#social-media" class="nav-link play-sfx"><i class="fas fa-share-alt"></i> Sosial Media</a>
+            <a href="#kontak" class="nav-link play-sfx"><i class="fas fa-envelope"></i> Hubungi Saya</a>
+            <a href="#musik" class="nav-link play-sfx"><i class="fas fa-music"></i> Musik Favorit</a>
+            <a href="#game" class="nav-link play-sfx"><i class="fas fa-gamepad"></i> Game Favorit</a>
+        </div>
+    </div>
+    <div id="drawer-overlay" class="drawer-overlay"></div>
+
+    <!-- KONTAINER UTAMA PORTOFOLIO -->
+    <div class="profile-container">
+        <div class="banner"></div>
+
+        <div class="content-wrapper" id="profile"> 
+            
+            <div class="profile-img-wrapper play-sfx" id="profile-img" title="Coba klik 3 kali!">
+                <img src="fotoprofil.jpg" alt="Foto Profil Adam" loading="eager" decoding="async" fetchpriority="high">
+            </div>
+
+            <div class="anime-character-header">
+                <span class="jp-sub">アダム・ヌル・セティヤワン</span>
+            </div>
+
+            <div id="dynamic-greeting" class="dynamic-greeting"></div>
+            <div id="digital-clock" class="digital-clock">00:00:00 WIB</div>
+            
+            <h1>Adam Nur Setyawan</h1>
+            <p class="username-tag">@adamnurs_</p>
+            <div class="typing-wrapper"><span class="typing-text">Hanya untuk bersenang-senang!</span></div>
+
+            <!-- DETAIL STATISTIK PROFIL -->
+            <div class="bio-section">
+                <div class="bio-row">
+                    <span class="bio-label"><i class="fas fa-calendar-alt"></i> Umur</span>
+                    <span class="bio-value">20 Tahun</span>
+                </div>
+                <div class="bio-row">
+                    <span class="bio-label"><i class="fas fa-briefcase"></i> Pekerjaan</span>
+                    <span class="bio-value">Shift Worker | Transit Point Logos</span>
+                </div>
+                <div class="bio-row">
+                    <span class="bio-label"><i class="fas fa-graduation-cap"></i> Jurusan</span>
+                    <span class="bio-value">OTKP (Tata Kelola Perkantoran)</span>
+                </div>
+                <div class="bio-row">
+                    <span class="bio-label"><i class="fas fa-envelope"></i> Email</span>
+                    <span class="bio-value"><a href="mailto:adamnursetyawan23@gmail.com" class="email-link play-sfx">adamnursetyawan23@gmail.com</a></span>
+                </div>
+                <div class="live-status-wrapper">
+                    <div id="live-status" class="live-status-box"></div>
+                </div>
+            </div>
+            
+            <!-- TOMBOL AKSI UTAMA -->
+            <div class="action-buttons">
+                <a href="cv/" target="_blank" class="action-btn btn-resume animate play-sfx">
+                    <i class="fas fa-file-download fa-lg"></i> Download Resume 
+                </a>
+                <a href="https://sociabuzz.com/adamnurs_/tribe" target="_blank" class="action-btn btn-support animate play-sfx">
+                    <i class="fas fa-coffee fa-lg"></i> Traktir Kopi
+                </a>
+            </div>
+
+            <!-- BAGIAN KEAHLIAN TEKNIS -->
+            <div class="section-title" id="keahlian">
+                <span class="title-jp">スキル & 能力</span>
+                <div class="title-main"><span>Keahlian</span></div>
+            </div>
+            
+            <div class="skills-section">
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span><i class="fab fa-html5 fa-fw" style="color: var(--c1);"></i> HTML</span>
+                        <span class="skill-stat-badge">80%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress html-progress" style="--w: 80%;"></div></div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span><i class="fab fa-css3-alt fa-fw" style="color: var(--c1);"></i> CSS</span>
+                        <span class="skill-stat-badge">50%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress css-progress" style="--w: 50%;"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span><i class="fab fa-python fa-fw" style="color: var(--c1);"></i> Python</span>
+                        <span class="skill-stat-badge">70%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress python-progress" style="--w: 70%;"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span><i class="fab fa-js fa-fw" style="color: var(--c1);"></i> JavaScript</span>
+                        <span class="skill-stat-badge">30%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress js-progress" style="--w: 30%;"></div></div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span><i class="fas fa-bed fa-fw" style="color: var(--c1);"></i> Tidur</span>
+                        <span class="skill-stat-badge">100%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress sleep-progress" style="--w: 100%;"></div></div>
+                </div>
+            </div>
+
+            <!-- BAGIAN TERMINAL HACKER -->
+            <div class="section-title" id="terminal">
+                <span class="title-jp">システム端末</span>
+                <div class="title-main"><span>Terminal</span></div>
+            </div>
+            <div class="terminal-box animate" id="terminal-box">
+                <div class="terminal-header">
+                    <div class="terminal-dots"><span class="dot-r"></span> <span class="dot-y"></span> <span class="dot-g"></span></div>
+                    adam@web-server:~
+                </div>
+                <div class="terminal-body" id="term-body">
+                    <div style="color: #94a3b8;">Welcome to Adam's OS v1.0.</div>
+                    <div style="color: #94a3b8;">Ketik <span style="color:#93c5fd; font-weight: bold;">help</span> lalu tekan Enter.</div>
+                </div>
+                <div class="terminal-input-line">
+                    <span class="term-prompt">guest@adam:~$</span>
+                    <input type="text" class="term-input" id="term-input" autocomplete="off" spellcheck="false">
+                </div>
+            </div>
+
+            <!-- BAGIAN PROYEK PILIHAN -->
+            <div class="section-title" id="proyek">
+                <span class="title-jp">プロジェクト</span>
+                <div class="title-main"><span>Proyek</span></div>
+            </div>
+            <a href="https://karinnchans.my.id" target="_blank" rel="noopener noreferrer" class="item-card animate play-sfx" id="project-portfolio">
+                <div class="item-icon"><i class="fas fa-globe"></i></div>
+                <div class="item-info">
+                    <h4>Website Portofolio</h4>
+                    <p>Dibuat dengan HTML, CSS & Animasi JS interaktif.</p>
+                </div>
+                <span class="card-action-badge"><i class="fas fa-arrow-up-right-from-square"></i> LIHAT</span>
+            </a>
+            <a href="https://chat.whatsapp.com/IwGraWRSuVU1fHr7nOUYqO?s=cl&p=a&mlu=4&ilr=4" target="_blank" rel="noopener noreferrer" class="item-card animate play-sfx" id="project-nodejs-bot">
+                <div class="item-icon"><i class="fab fa-node-js"></i></div>
+                <div class="item-info">
+                    <h4>Node JS Bot</h4>
+                    <p>Bot WhatsApp otomatis & interaktif berbasis Node.js.</p>
+                </div>
+                <span class="card-action-badge"><i class="fas fa-arrow-up-right-from-square"></i> LIHAT</span>
+            </a>
+
+            <!-- BAGIAN TANYA JAWAB (FAQ) -->
+            <div class="section-title" id="faq">
+                <span class="title-jp">よくある質問</span>
+                <div class="title-main"><span>Tanya Jawab Singkat</span></div>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item animate">
+                    <div class="faq-question play-sfx">Menerima project pembuatan web? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Tentu saja! Jika Anda butuh bantuan untuk membuat atau mendesain website, langsung saja hubungi saya lewat form kontak di bawah atau WhatsApp.</div>
+                </div>
+                <div class="faq-item animate">
+                    <div class="faq-question play-sfx">Bisa mabar (main bareng) game? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Sangat bisa! Silakan add Roblox saya di kartu game di bawah. Jangan lupa kabari kalau mau main bareng.</div>
+                </div>
+                <div class="faq-item animate">
+                    <div class="faq-question play-sfx">Apa rutinitas harian Adam? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Sebagai Shift Worker, rutinitas saya menyesuaikan jadwal. Tapi di waktu luang, saya biasanya ngoding, main game, atau rebahan (tidur 100%).</div>
+                </div>
+            </div>
+
+            <!-- BAGIAN MITRA & PARTNERSHIP -->
+            <div class="section-title" id="mitra">
+                <span class="title-jp">パートナーシップ</span>
+                <div class="title-main"><span>Mitra</span></div>
+            </div>
+            <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" class="item-card animate play-sfx">
+                <div class="item-icon">
+                    <svg class="gemini-svg" viewBox="0 0 24 24" width="22" height="22" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+                        <path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z" fill="#FFFFFF"/>
+                    </svg>
+                </div>
+                <div class="item-info">
+                    <h4>Google Gemini</h4>
+                    <p>AI dari Google untuk pencarian & analisis cerdas.</p>
+                </div>
+                <span class="card-action-badge"><i class="fas fa-external-link-alt"></i> KUNJUNGI</span>
+            </a>
+
+            <!-- BAGIAN SOSIAL MEDIA -->
+            <div class="section-title" id="social-media">
+                <span class="title-jp">通信リンク</span>
+                <div class="title-main"><span>Sosial Media</span></div>
+            </div>
+            <div class="social-buttons">
+                <a href="https://wa.me/62895351850288" target="_blank" rel="noopener noreferrer" class="social-btn btn-wa play-sfx" style="animation-delay: 0.05s;">
+                    <i class="fab fa-whatsapp fa-fw fa-lg"></i> WhatsApp
+                </a>
+                <a href="https://www.tiktok.com/@karinnchans_?_r=1&_t=ZS-98JYcb2oGpA" target="_blank" rel="noopener noreferrer" class="social-btn btn-tiktok play-sfx" style="animation-delay: 0.1s;">
+                    <i class="fab fa-tiktok fa-fw fa-lg"></i> TikTok
+                </a>
+                <a href="https://www.facebook.com/share/1HagpuwkQC/" target="_blank" rel="noopener noreferrer" class="social-btn btn-fb play-sfx" style="animation-delay: 0.15s;">
+                    <i class="fab fa-facebook-f fa-fw fa-lg"></i> Facebook
+                </a>
+                <a href="https://www.instagram.com/adamnurs_?igsh=bGtyNWw0eXppeHhx" target="_blank" rel="noopener noreferrer" class="social-btn btn-ig play-sfx" style="animation-delay: 0.2s;">
+                    <i class="fab fa-instagram fa-fw fa-lg"></i> Instagram
+                </a>
+
+                <div id="hidden-socials" class="hidden-socials">
+                    <a href="https://dsc.gg/dans" target="_blank" rel="noopener noreferrer" class="social-btn btn-discord animate play-sfx">
+                        <i class="fab fa-discord fa-fw fa-lg"></i> Discord
+                    </a>
+                    <a href="https://youtube.com/@iniadam?si=Y7zux1puuJVqUaDI" target="_blank" rel="noopener noreferrer" class="social-btn btn-yt animate play-sfx">
+                        <i class="fab fa-youtube fa-fw fa-lg"></i> YouTube
+                    </a>
+                    <a href="https://t.me/dansmontelli" target="_blank" rel="noopener noreferrer" class="social-btn btn-tele animate play-sfx">
+                        <i class="fab fa-telegram fa-fw fa-lg"></i> Telegram
+                    </a>
+                </div>
+
+                <button id="toggle-social-btn" class="social-btn btn-toggle-social animate play-sfx" style="animation-delay: 0.25s;">
+                    <i class="fas fa-chevron-down fa-fw fa-lg"></i> Tampilkan Lainnya
+                </button>
+            </div>
+
+            <!-- BAGIAN FORMULIR HUBUNGI SAYA -->
+            <div class="section-title" id="kontak">
+                <span class="title-jp">直接通信</span>
+                <div class="title-main"><span>Hubungi Saya</span></div>
+            </div>
+            <form action="mailto:adamnursetyawan23@gmail.com" method="post" enctype="text/plain" class="contact-form animate">
+                <div class="form-group">
+                    <input type="text" name="Nama" placeholder="Nama Anda" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <textarea name="Pesan" placeholder="Tulis pesan Anda disini..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn play-sfx">
+                    <i class="fas fa-paper-plane"></i> Kirim Pesan
+                </button>
+            </form>
+
+            <!-- BAGIAN MUSIK FAVORIT (SPOTIFY) -->
+            <div class="section-title" id="musik">
+                <span class="title-jp">オーディオ // サウンド</span>
+                <div class="title-main"><span>Musik Favorit</span></div>
+            </div>
+            <div class="spotify-player-container">
+                <iframe style="border-radius:16px; box-shadow: 0 8px 25px rgba(17, 54, 105, 0.2);" 
+                    src="https://open.spotify.com/embed/playlist/4ZdHBOgN4UAVpw7J5uZPux?utm_source=generator&theme=0" 
+                    width="100%" height="380" frameBorder="0" allowfullscreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+            </div>
+            
+            <!-- BAGIAN GAME FAVORIT -->
+            <div class="section-title" id="game">
+                <span class="title-jp">ゲームプロフィール</span>
+                <div class="title-main"><span>Game Favorit</span></div>
+            </div>
+            
+            <a href="https://www.roblox.com/share?code=902d3725663242448dff38d0e834b2bf&type=Profile&source=ProfileShare&stamp=1785040591037" target="_blank" rel="noopener noreferrer" class="item-card animate play-sfx">
+                <div class="item-icon icon-roblox">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" shape-rendering="geometricPrecision">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.834 24L0 18.834L5.166 0L24 5.166L18.834 24ZM14.633 9.925L9.925 8.633L8.633 13.341L13.341 14.633L14.633 9.925Z"/>
+                    </svg>
+                </div>
+                <div class="item-info">
+                    <h4>Roblox</h4>
+                    <p>Ayo main bareng! Klik untuk add friend akun saya.</p>
+                </div>
+                <span class="card-action-badge"><i class="fas fa-user-plus"></i> TAMBAH</span>
+            </a>
+
+            <!-- FOOTER HAK CIPTA -->
+            <div class="footer-cr">
+                Dibuat dengan <i class="fas fa-heart"></i> oleh Adam Nur Setyawan 2026
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGIKA JAVASCRIPT RINGAN DAN EFISIEN (OPTIMALISASI BEBAS LAG) -->
+    <script>
+        // 1. INISIALISASI AUDIO CONTEXT DENGAN OPTIMALISASI DAYA
+        let audioCtx = null;
+        function initAudio() {
+            if (!audioCtx) {
+                const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+                if (AudioContextClass) {
+                    audioCtx = new AudioContextClass();
+                }
+            }
+            if (audioCtx && audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }
+        document.body.addEventListener('click', initAudio, { once: true, passive: true });
+        
+        function playClickSFX() {
+            if (!audioCtx) return;
+            try {
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.type = 'sine';
+                const now = audioCtx.currentTime;
+                osc.frequency.setValueAtTime(800, now);
+                osc.frequency.exponentialRampToValueAtTime(1200, now + 0.04);
+                gain.gain.setValueAtTime(0.04, now);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.04);
+                osc.start(now);
+                osc.stop(now + 0.04);
+            } catch (err) {
+                // MENGABAIKAN ERROR AUDIO JIKA BROWSER MEMBATASI
+            }
+        }
+
+        // MEMASANG SFX PADA SEMUA ELEMEN INTERAKTIF
+        document.querySelectorAll('.play-sfx').forEach(el => {
+            el.addEventListener('click', playClickSFX, { passive: true });
+        });
+
+        // 2. KURSOR KUSTOM DENGAN INTERPOLASI LINEAR (LERP) & REQUEST ANIMATION FRAME (ZERO JANK / ZERO LAG)
+        const dot = document.getElementById("cursor-dot");
+        const outline = document.getElementById("cursor-outline");
+        let mouseX = -100, mouseY = -100;
+        let outlineX = -100, outlineY = -100;
+        let cursorRaf = null;
+
+        function updateCursorFrame() {
+            outlineX += (mouseX - outlineX) * 0.22;
+            outlineY += (mouseY - outlineY) * 0.22;
+            outline.style.transform = `translate3d(${outlineX}px, ${outlineY}px, 0) translate(-50%, -50%)`;
+            
+            if (Math.abs(mouseX - outlineX) > 0.1 || Math.abs(mouseY - outlineY) > 0.1) {
+                cursorRaf = requestAnimationFrame(updateCursorFrame);
+            } else {
+                cursorRaf = null;
+            }
+        }
+
+        window.addEventListener("mousemove", (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+            if (!cursorRaf) {
+                cursorRaf = requestAnimationFrame(updateCursorFrame);
+            }
+        }, { passive: true });
+        
+        // EFEK HOVER KURSOR MEMBESAR SECARA ELEGAN
+        document.querySelectorAll('a, button, .faq-question, .profile-img-wrapper, input, textarea').forEach(el => {
+            el.addEventListener('mouseenter', () => { document.body.classList.add('cursor-hover'); }, { passive: true });
+            el.addEventListener('mouseleave', () => { document.body.classList.remove('cursor-hover'); }, { passive: true });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 3. JAM DIGITAL REAL-TIME
+            const clockEl = document.getElementById('digital-clock');
+            if (clockEl) {
+                const updateClock = () => {
+                    const now = new Date();
+                    clockEl.textContent = now.toLocaleTimeString('id-ID') + ' WIB';
+                };
+                updateClock();
+                setInterval(updateClock, 1000);
+            }
+
+            // 4. SAPAAN DINAMIS & LIVE STATUS BERDASARKAN JAM WAKTU INDONESIA
+            const greetingEl = document.getElementById('dynamic-greeting');
+            const statusEl = document.getElementById('live-status');
+            
+            function updateTimeStatus() {
+                const hour = new Date().getHours();
+                let greetingText = '';
+                let statusText = '';
+                
+                if (hour >= 4 && hour < 11) {
+                    greetingText = 'Halo, Selamat Pagi! ☕';
+                } else if (hour >= 11 && hour < 15) {
+                    greetingText = 'Halo, Selamat Siang! ☀️';
+                } else if (hour >= 15 && hour < 18) {
+                    greetingText = 'Halo, Selamat Sore! ⛅';
+                } else {
+                    greetingText = 'Halo, Selamat Malam! 🌙';
+                }
+                
+                if (hour >= 8 && hour < 16) {
+                    statusText = '🟢 Status: Sedang Bekerja / Sibuk';
+                } else if (hour >= 16 && hour < 22) {
+                    statusText = '🎮 Status: Santai / Push Rank';
+                } else {
+                    statusText = '💤 Status: Mode Tidur (Tinggalkan pesan)';
+                }
+
+                if (greetingEl) greetingEl.textContent = greetingText;
+                if (statusEl) statusEl.textContent = statusText;
+            }
+            updateTimeStatus();
+            setInterval(updateTimeStatus, 60000);
+
+            // 5. SISTEM TERMINAL SIBER INTERAKTIF
+            const termInput = document.getElementById('term-input');
+            const termBody = document.getElementById('term-body');
+            const terminalBox = document.getElementById('terminal-box');
+
+            if (termInput && termBody) {
+                termInput.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter') {
+                        const val = this.value.trim().toLowerCase();
+                        this.value = '';
+                        if (val === '') return;
+                        
+                        const line = document.createElement('div');
+                        line.style.marginTop = '5px';
+                        line.innerHTML = `<span class="term-prompt">guest@adam:~$</span> ${val.replace(/</g, "&lt;").replace(/>/g, "&gt;")}`;
+                        termBody.appendChild(line);
+                        
+                        const response = document.createElement('div');
+                        if (val === 'help') {
+                            response.style.color = '#94a3b8';
+                            response.innerHTML = `Available commands:<br>- <span style="color:#93c5fd; font-weight:bold;">help</span>  : Tampilkan daftar bantuan<br>- <span style="color:#93c5fd; font-weight:bold;">about</span> : Tampilkan info sistem profil<br>- <span style="color:#93c5fd; font-weight:bold;">clear</span> : Bersihkan layar terminal`;
+                        } else if (val === 'about') {
+                            response.style.color = '#93c5fd';
+                            response.innerHTML = `[SYSTEM INFO]<br><span style="color:#e2e8f0;">Name: Adam Nur Setyawan<br>Age: 20<br>Status: Shift Worker by day, Gamer by night.<br>Vibe: "Hanya untuk bersenang-senang!"</span>`;
+                        } else if (val === 'clear') {
+                            termBody.innerHTML = '';
+                            return;
+                        } else {
+                            response.style.color = '#ff5f56';
+                            response.textContent = `Command not found: ${val}. Ketik 'help' untuk bantuan.`;
+                        }
+                        termBody.appendChild(response);
+                        termBody.scrollTop = termBody.scrollHeight;
+                    }
+                });
+
+                if (terminalBox) {
+                    terminalBox.addEventListener('click', () => { termInput.focus(); }, { passive: true });
+                }
+            }
+
+            // 6. AKORDION TANYA JAWAB (FAQ)
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        item.classList.toggle('active');
+                    });
+                }
+            });
+
+            // 7. EASTER EGG (CONFETTI 3X KLIK PADA FOTO PROFIL)
+            const profileImg = document.getElementById('profile-img');
+            if (profileImg) {
+                let clickCount = 0;
+                let clickTimer;
+                profileImg.addEventListener('click', () => {
+                    clickCount++;
+                    clearTimeout(clickTimer);
+                    if (clickCount === 3) {
+                        if (typeof confetti === 'function') {
+                            confetti({ particleCount: 120, spread: 70, origin: { y: 0.6 }, zIndex: 10000 });
+                        }
+                        clickCount = 0; 
+                    }
+                    clickTimer = setTimeout(() => { clickCount = 0; }, 1500);
+                });
+            }
+
+            // 8. TOMBOL KEMBALI KE ATAS (THROTTLED SCROLL)
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (backToTopBtn) {
+                let scrollTicking = false;
+                window.addEventListener('scroll', () => {
+                    if (!scrollTicking) {
+                        requestAnimationFrame(() => {
+                            if (window.scrollY > 350) {
+                                backToTopBtn.classList.add('show');
+                            } else {
+                                backToTopBtn.classList.remove('show');
+                            }
+                            scrollTicking = false;
+                        });
+                        scrollTicking = true;
+                    }
+                }, { passive: true });
+                
+                backToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // 9. LACI NAVIGASI SAMPING (DRAWER)
+            const menuBtn = document.getElementById('menu-btn');
+            const closeBtn = document.getElementById('close-btn');
+            const drawer = document.getElementById('side-drawer');
+            const overlay = document.getElementById('drawer-overlay');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            function toggleDrawer() {
+                drawer.classList.toggle('open');
+                overlay.classList.toggle('open');
+            }
+
+            if (menuBtn) menuBtn.addEventListener('click', toggleDrawer);
+            if (closeBtn) closeBtn.addEventListener('click', toggleDrawer);
+            if (overlay) overlay.addEventListener('click', toggleDrawer);
+            navLinks.forEach(link => { link.addEventListener('click', toggleDrawer); });
+
+            // 10. TOGGLE TEMA (DARK / LIGHT MODE)
+            const themeBtn = document.getElementById('theme-btn');
+            if (themeBtn) {
+                const themeIcon = themeBtn.querySelector('i');
+                themeBtn.addEventListener('click', () => {
+                    document.body.classList.toggle('dark-mode');
+                    if (document.body.classList.contains('dark-mode')) {
+                        themeIcon.classList.remove('fa-moon');
+                        themeIcon.classList.add('fa-sun');
+                    } else {
+                        themeIcon.classList.remove('fa-sun');
+                        themeIcon.classList.add('fa-moon');
+                    }
+                });
+            }
+
+            // 11. TOGGLE TAMPILAN SOSIAL MEDIA LAINNYA
+            const toggleSocialBtn = document.getElementById('toggle-social-btn');
+            const hiddenSocials = document.getElementById('hidden-socials');
+            if (toggleSocialBtn && hiddenSocials) {
+                toggleSocialBtn.addEventListener('click', () => {
+                    hiddenSocials.classList.toggle('show');
+                    if (hiddenSocials.classList.contains('show')) {
+                        toggleSocialBtn.innerHTML = '<i class="fas fa-chevron-up fa-fw fa-lg"></i> Sembunyikan';
+                    } else {
+                        toggleSocialBtn.innerHTML = '<i class="fas fa-chevron-down fa-fw fa-lg"></i> Tampilkan Lainnya';
+                    }
+                });
+            }
+
+            // 12. ANIMASI SAAT MENGGULIR (INTERSECTION OBSERVER EFISIEN - UNOBSERVE SETELAH TAMPIL)
+            const observerOptions = { threshold: 0.08, rootMargin: "0px 0px -40px 0px" };
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.skill-item, .social-btn, .item-card, .contact-form, .terminal-box, .faq-item, .action-btn').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

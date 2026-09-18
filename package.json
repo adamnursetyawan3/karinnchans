@@ -1,0 +1,14 @@
+{
+  "name": "profileadamv3",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "mkdir -p dist/cv && cp -r cv/* dist/cv/ 2>/dev/null || true && cp -r *.html *.jpg *.pdf dist/ 2>/dev/null || true",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Adam Nur Setyawan</title>
+    <!-- FONT AWESOME UNTUK IKON-IKON DETAIL PRIBADI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef;
+            color: #333;
+            line-height: 1.6;
+            min-width: 220mm; /* MEMASTIKAN BACKGROUND PENUH HINGGA KE TEPI SAAT DISCROLL */
+        }
+        
+        /* GAYA UNTUK HEADER / TOMBOL DOWNLOAD & NAVIGASI SIMETRIS */
+        .download-btn-container {
+            display: flex;
+            justify-content: center; /* MEMPOSISIKAN TOMBOL TEPAT DI TENGAH SECARA SIMETRIS */
+            align-items: center;
+            gap: 16px;
+            width: 100%;
+            padding: 18px 20px;
+            background-color: #1a202c; /* BACKGROUND GELAP YANG ELEGAN */
+            border-bottom: 1px solid #2d3748;
+        }
+        
+        .cv-action-btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 220px; /* UKURAN LEBAR PRESISI SERAGAM 100% */
+            height: 46px; /* TINGGI PRESISI SERAGAM 100% */
+            padding: 0 16px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            text-decoration: none;
+            cursor: pointer;
+            box-sizing: border-box;
+            line-height: 1;
+            transition: all 0.25s ease;
+            white-space: nowrap;
+            outline: none;
+            border: 2px solid transparent;
+            user-select: none;
+        }
+
+        .back-btn {
+            background-color: transparent;
+            border-color: #4a5568;
+            color: #e2e8f0;
+        }
+        .back-btn:hover {
+            background-color: #2d3748;
+            border-color: #cbd5e0;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+        }
+
+        .download-btn {
+            background-color: #2b6cb0;
+            border-color: #4299e1;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(43, 108, 176, 0.35);
+        }
+        .download-btn:hover { 
+            background-color: #3182ce; 
+            border-color: #63b3ed;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(66, 153, 225, 0.45);
+        }
+
+        /* STRUKTUR KONTAINER UTAMA */
+        .cv-container {
+            display: flex;
+            width: 210mm; /* LEBAR STANDAR KERTAS A4 */
+            min-height: 297mm; /* TINGGI STANDAR KERTAS A4 */
+            margin: 30px auto;
+            background-color: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        
+        /* KOLOM KIRI - SISI GELAP */
+        .left-column {
+            width: 35%;
+            background-color: #1a365d; /* BIRU DONGKER PROFESIONAL */
+            color: #f8f9fa;
+            padding: 40px 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* MEMBUAT SEMUA ISI DI TENGAH (SIMETRIS) */
+        }
+
+        /* FOTO PROFIL YANG PRESISI */
+        .photo-container {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 5px solid #a0aec0;
+            overflow: hidden;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            background-color: #2d3748;
+        }
+        
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center; /* PRESISI TEPAT DI TENGAH */
+        }
+
+        /* NAMA DAN JABATAN DI KOLOM KIRI */
+        .name-title {
+            text-align: center;
+            margin-bottom: 35px;
+            width: 100%;
+        }
+        
+        .name-title h1 {
+            font-size: 19px; /* UKURAN DISESUAIKAN AGAR MUAT */
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            white-space: nowrap; /* MENCEGAH NAMA MENUMPUK KE BAWAH */
+        }
+        
+        .name-title h2 {
+            font-size: 13px;
+            font-weight: 400;
+            color: #cbd5e0;
+            letter-spacing: 1px;
+        }
+
+        /* BAGIAN KONTEN KIRI */
+        .left-content {
+            width: 100%;
+        }
+        
+        .section-title-left {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #4a5568;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* DETAIL KONTAK */
+        .detail-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            font-size: 12.5px;
+        }
+        .detail-icon {
+            width: 25px;
+            color: #a0aec0;
+            font-size: 14px;
+            margin-top: 3px;
+        }
+        .detail-text {
+            flex: 1;
+            line-height: 1.5;
+        }
+        
+        /* KEAHLIAN / BAHASA */
+        .skill-item {
+            margin-bottom: 12px;
+        }
+        .skill-name {
+            font-size: 13px;
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .skill-bar {
+            width: 100%;
+            height: 6px;
+            background-color: #2d3748;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .skill-level {
+            height: 100%;
+            background-color: #a0aec0;
+        }
+
+        /* KOLOM KANAN - SISI TERANG */
+        .right-column {
+            width: 65%;
+            padding: 50px 40px;
+            background-color: #fff;
+        }
+
+        .section-title-right {
+            color: #1a365d;
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e2e8f0;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 35px;
+        }
+        .section-title-right:first-child {
+            margin-top: 0;
+        }
+
+        .about-text {
+            font-size: 14.5px;
+            color: #4a5568;
+            text-align: justify;
+        }
+        
+        /* RIWAYAT PENDIDIKAN & PENGALAMAN (GAYA TIMELINE) */
+        .timeline-item {
+            margin-bottom: 25px;
+        }
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+            gap: 15px; /* JARAK ANTARA JUDUL DAN TANGGAL */
+        }
+        .timeline-title {
+            font-weight: 700;
+            font-size: 16px;
+            color: #2d3748;
+        }
+        .timeline-date {
+            font-size: 13px;
+            color: #718096;
+            font-weight: 600;
+            background-color: #f7fafc;
+            padding: 4px 8px;
+            border-radius: 4px;
+            white-space: nowrap; /* MENCEGAH TANGGAL TERBELAH KE BAWAH */
+            flex-shrink: 0; /* MENGUNCI AGAR KOTAK TANGGAL TIDAK MENYUSUT */
+        }
+        .timeline-subtitle {
+            font-size: 14px;
+            color: #3182ce;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .timeline-desc {
+            margin: 0;
+            padding-left: 18px;
+            font-size: 14px;
+            color: #4a5568;
+        }
+        .timeline-desc li {
+            margin-bottom: 6px;
+        }
+        
+        /* GAYA KHUSUS CETAK (PRINT PREVIEW) */
+        @media print {
+            @page { margin: 0; size: A4; }
+            body { background-color: #fff; margin: 0; padding: 0; min-width: auto; }
+            .download-btn-container { display: none !important; }
+            .cv-container {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                min-height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- BAGIAN TOMBOL DOWNLOAD & NAVIGASI SIMETRIS -->
+<div class="download-btn-container" id="cv-header-actions">
+    <a href="/" class="cv-action-btn back-btn" id="btn-back-profile">
+        <i class="fa-solid fa-arrow-left"></i> Kembali ke Profil
+    </a>
+    <!-- TOMBOL DOWNLOAD DOKUMEN PDF CV -->
+    <a href="cv.pdf" download="CV-Adam-Nur-Setyawan.pdf" class="cv-action-btn download-btn" id="btn-print-cv">
+        <i class="fa-solid fa-file-arrow-down"></i> Unduh File PDF
+    </a>
+</div>
+
+<!-- TATA LETAK UTAMA CURRICULUM VITAE -->
+<div class="cv-container">
+    
+    <!-- KOLOM KIRI: BIODATA & KEMAMPUAN BAHASA -->
+    <div class="left-column">
+        <!-- FOTO PROFIL PRESISI TENGAH -->
+        <div class="photo-container">
+            <img src="fotoprofil.jpg" alt="Foto Adam Nur Setyawan" onerror="this.src='../fotoprofil.jpg'">
+        </div>
+        
+        <div class="name-title">
+            <h1>Adam Nur Setyawan</h1>
+            <h2>ADMINISTRASI PERKANTORAN</h2>
+        </div>
+        
+        <div class="left-content">
+            <div class="section-title-left">Kontak & Info</div>
+            
+            <div class="detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="detail-text">kontak@karinnchans.my.id</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="detail-text">+62 895-3518-50288</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-house"></i></div>
+                <div class="detail-text">Graha Harapan Regency Blok 14 No. 12, Rt.007/Rw.012, Kec. Babelan, Kab. Bekasi, Jawa Barat 17610</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                <div class="detail-text">Jakarta, 11 Mei 2007</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-user"></i></div>
+                <div class="detail-text">Laki-laki | Belum Menikah</div>
+            </div>
+
+            <div class="section-title-left" style="margin-top: 30px;">Kemampuan Bahasa</div>
+            
+            <div class="skill-item">
+                <div class="skill-name"><span>Indonesia</span> <span>Native</span></div>
+                <div class="skill-bar"><div class="skill-level" style="width: 100%;"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name"><span>Jawa</span> <span>Fasih</span></div>
+                <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name"><span>Inggris</span> <span>Dasar</span></div>
+                <div class="skill-bar"><div class="skill-level" style="width: 40%;"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name"><span>Jepang</span> <span>Pemula</span></div>
+                <div class="skill-bar"><div class="skill-level" style="width: 30%;"></div></div>
+            </div>
+
+            <div class="section-title-left" style="margin-top: 30px;">Hobi & Minat</div>
+            
+            <div class="detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-utensils"></i></div>
+                <div class="detail-text">Memasak</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-music"></i></div>
+                <div class="detail-text">Bermain Musik</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <div class="detail-text">Ngoding</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- KOLOM KANAN: PROFIL PROFESIONAL, PENGALAMAN KERJA & RIWAYAT PENDIDIKAN -->
+    <div class="right-column">
+        
+        <div class="section-title-right"><i class="fa-solid fa-user-tie" style="margin-right: 10px; color:#1a365d;"></i> Profil Profesional</div>
+        <div class="about-text">
+            Lulusan baru Otomatisasi dan Tata Kelola Perkantoran yang teliti, sangat terorganisir, dan terbiasa dengan standar kerja perkantoran. Memiliki kompetensi kuat dalam tata kearsipan (manual & digital), korespondensi bisnis, dan entri data. Mahir menggunakan perangkat lunak perkantoran seperti Microsoft Word, Excel, dan Powerpoint. Memiliki komitmen tinggi untuk menjaga kerapian data dan mendukung efisiensi operasional perusahaan.
+        </div>
+
+        <div class="section-title-right"><i class="fa-solid fa-briefcase" style="margin-right: 10px; color:#1a365d;"></i> Pengalaman Kerja</div>
+        
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <div class="timeline-title">Staf Sortir & Logistik</div>
+                <div class="timeline-date">Mei 2023 - Sekarang</div>
+            </div>
+            <div class="timeline-subtitle">TRANSIT POINT LOGOS, BEKASI</div>
+            <ul class="timeline-desc">
+                <li>Mengorganisir, menyortir, dan mempersiapkan kelengkapan barang secara teliti sebelum didistribusikan ke area gudang Distribution Center (DC).</li>
+                <li>Berkolaborasi dengan tim operasional untuk memastikan efisiensi waktu dalam proses penyortiran dan pengemasan produk.</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <div class="timeline-title">Staf Administrasi & Pelayanan (Magang)</div>
+                <div class="timeline-date">Okt 2023 - Des 2023</div>
+            </div>
+            <div class="timeline-subtitle">KANTOR URUSAN AGAMA (KUA), KEC. BABELAN, BEKASI</div>
+            <ul class="timeline-desc">
+                <li>Melakukan tugas administratif kantor secara sistematis, termasuk pengelolaan dokumen dan pemberkasan.</li>
+                <li>Memberikan pelayanan langsung kepada masyarakat dan menjalin komunikasi yang efektif dengan staf lainnya guna memastikan kelancaran operasional.</li>
+            </ul>
+        </div>
+
+        <div class="section-title-right"><i class="fa-solid fa-graduation-cap" style="margin-right: 10px; color:#1a365d;"></i> Riwayat Pendidikan</div>
+        
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <div class="timeline-title">Otomatisasi & Tata Kelola Perkantoran (OTKP)</div>
+                <div class="timeline-date">Jul 2023 - Mei 2025</div>
+            </div>
+            <div class="timeline-subtitle">SMKS ALAM KARYA, BEKASI</div>
+            <ul class="timeline-desc">
+                <li>Mampu mengoperasikan berbagai perangkat lunak perkantoran (Microsoft Word, Excel, Powerpoint) dengan sangat baik.</li>
+                <li>Menguasai prosedur pengelolaan dokumen, arsip, dan korespondensi bisnis secara sistematis dan aman.</li>
+                <li>Terlatih dalam prinsip dasar administrasi, teknik komunikasi profesional, serta standar pelayanan prima (customer service).</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <div class="timeline-title">Pendidikan Menengah Pertama</div>
+                <div class="timeline-date">Apr 2020 - Mar 2023</div>
+            </div>
+            <div class="timeline-subtitle">SMP AZ-ZAHRA, BEKASI</div>
+            <ul class="timeline-desc">
+                <li>Fokus pada pengembangan disiplin, komunikasi dasar, dan konsep manajemen waktu yang efisien.</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
